@@ -1,4 +1,4 @@
-# React WebCam for Capturing ID Cards along with Croping(React-Image-Crop) 
+# React WebCam for Capturing selfie along with Croping(React-Image-Crop) 
 
 # Getting Started with Create React App
 
