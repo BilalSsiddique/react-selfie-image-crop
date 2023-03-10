@@ -81,7 +81,7 @@ const CaptureCard = () => {
 
   return (
     <div className="capture-card-container" >
-      <div className="navigation">
+      <div className="navigation2">
         <div>
           <img src={'./enroll.svg'} alt="" width={30} height={31} />
           <p className="nav-text">Enroll</p>

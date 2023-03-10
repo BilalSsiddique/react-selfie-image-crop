@@ -33,12 +33,13 @@ html,body{
 }
 
 
-.navigation{
+.navigation2{
   position: absolute;
   z-index: 888;
   top: 0;
+  gap:0px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   background-color: transparent;
   width: 100%;
   padding: 10px 0px;
@@ -182,20 +183,6 @@ html,body{
 }
 
 
-
-.ReactCrop :not(.ReactCrop__crop-selection){
-  /* filter: blur(50px); */
-  
-  /* z-index: 2; */
-  /* background-color: white !important; */
-}
-
-
-/* .ReactCrop--disabled{
-  background-color: black !important;
-} */
-
-
 .ReactCrop .ReactCrop__image {
   
   -webkit-mask-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1), transparent, transparent);
@@ -204,37 +191,12 @@ html,body{
 }
 
 
-/* .ReactCrop .ReactCrop__image--crop .ReactCrop__image {
-  fill: white !important;
-  background-color: black !important;
-} */
-
-/* .ReactCrop .ReactCrop__crop-selection {
-  background-color: transparent !important;
-  z-index: 99999;
-} */
-
-/* .white-transparent {
-  background-color: white!important;
-  backdrop-filter: blur(10px);
-  z-index: -90000;
-  
-} */
-
-/* .white-transparent .ReactCrop__overlay {
-  background-color: blue !important;
-  z-index: -99999;
- 
-} */
-/* .ReactCrop__crop-selection {
-  background-color: red !important;
-}  */
 
 
 .ReactCrop    {
-   filter: invert(150%);
+   filter: invert(100%);
    /* backdrop-filter: blur(10px); */
-  -webkit-filter: invert(150%);
+  -webkit-filter: invert(100%);
 }
 
 
