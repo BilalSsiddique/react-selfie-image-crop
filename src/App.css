@@ -21,7 +21,7 @@ html,body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 450.3px;
+  width: 350.3px;
   max-width: 458.3px;
   height: 625.58px;
  
@@ -204,8 +204,9 @@ html,body{
 
 .ReactCrop    {
    filter: invert(100%);
+   -webkit-filter: invert(100%);
    /* backdrop-filter: blur(10px); */
-  -webkit-filter: invert(100%);
+  /* filter: invert(100%) sepia(0%) saturate(4940%) hue-rotate(294deg) brightness(110%) contrast(55%); */
 }
 
 

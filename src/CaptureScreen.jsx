@@ -14,7 +14,7 @@ const CaptureCard = ({setCheck , setVerify,enroll, setEnroll}) => {
   const [captureImage, setCaptureImage] = useState(null);
   const crop = {
     unit: "px",
-    x: 90, // center the border horizontally
+    x: 40, // center the border horizontally
     y: 130, // adjust the top margin as needed
     width: 280,
     height: 380.58,
@@ -23,8 +23,7 @@ const CaptureCard = ({setCheck , setVerify,enroll, setEnroll}) => {
   const webcamRef = useRef(null);
 
   const videoConstraints = {
-    
-    width: 450.3,
+    width: 360.3,
     height: 630.58,
     facingMode: camera,
   };
