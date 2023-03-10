@@ -21,8 +21,9 @@ html,body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 450.3px;
   max-width: 458.3px;
-  height: auto;
+  height: 625.58px;
  
   
  
@@ -46,7 +47,7 @@ html,body{
 }
 /* Navbar text */
 .nav-text{
-  color: white;
+  color: gray;
   margin-top: 5px;
   font-size: 13px;
 }
@@ -55,7 +56,7 @@ html,body{
   position: absolute;
   top:10%;
   z-index:9999;
-  color: white;
+  color: gray;
 }
 .camera{
   position: relative !important;
@@ -87,7 +88,7 @@ html,body{
   /* gap: 50px; */
   width: 100%;
   position: absolute;
-  bottom:8%;
+  bottom:6.5%;
   z-index:9999;
   padding: 3px 0px;
   /* padding-left: 5px; */
@@ -101,7 +102,7 @@ html,body{
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-left: 42%;
+  margin-left: 46%;
   padding-Left:10px ;
 }
 
@@ -175,6 +176,7 @@ html,body{
 .ReactCrop .ReactCrop__crop-selection {
   border-radius: 50%;
   background-color: transparent !important;
+  border: solid 0px   !important;
   /* z-index: 99999; */
   
 }
@@ -227,4 +229,12 @@ html,body{
 /* .ReactCrop__crop-selection {
   background-color: red !important;
 }  */
+
+
+.ReactCrop    {
+   filter: invert(150%);
+   /* backdrop-filter: blur(10px); */
+  -webkit-filter: invert(150%);
+}
+
 

@@ -4,7 +4,7 @@ import Webcam from "react-webcam";
 import ReactCrop from "react-image-crop";
 import "react-image-crop/dist/ReactCrop.css";
 import cameraIcon from "./Icons/camrea.svg";
-import flip from "./Icons/flip.svg";
+import Flip2 from "./Icons/Flip2.svg";
 import upload from "./Icons/Object.svg";
 import faceki from "./Icons/faceki.svg";
 import "react-image-crop/dist/ReactCrop.css";
@@ -24,7 +24,7 @@ const CaptureCard = () => {
 
   const videoConstraints = {
     width: 450.3,
-    height: 700.58,
+    height: 630.58,
     facingMode: camera,
   };
 
@@ -182,12 +182,12 @@ const CaptureCard = () => {
             />
           )}
           <img
-            src={flip}
+            src={Flip2}
             onClick={handleCameraFlip}
-            alt=""
-            width={30}
-            height={31}
-            style={{ marginLeft:"auto",alignSelf:"end" }}
+            alt="flipcamera"
+            width={90}
+            height={41}
+            style={{ marginLeft:"auto",alignSelf:'end'}}
           />
         </div>
         {/* <img src={upload} alt="" width={30} height={31} /> */}
@@ -204,7 +204,7 @@ const CaptureCard = () => {
           }}
         />
       )}
-      <img src={faceki} alt="name" style={{ alignSelf: "flex-start", position:'absolute',bottom:"3%",left: '2%',background:"white"  }} />
+      <img src={faceki} alt="name" style={{ alignSelf: "flex-start", position:'absolute',bottom:"3%",left: '2%' }} />
     </div>
   );
 };
