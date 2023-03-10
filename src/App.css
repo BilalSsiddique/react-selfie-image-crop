@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap');
-html,body{
+html,
+body {
   font-family: 'Inter', sans-serif;
 }
-.App{
+.App {
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   background-color: #343333;
-  
 }
 /* camera
  */
 .capture-card-container {
   display: flex;
-  background-color: white ;
+  background-color: white;
   box-shadow: 0px 0px 20px 5px rgb(94, 92, 92);
   border-radius: 5px;
   flex-direction: column;
@@ -24,49 +24,41 @@ html,body{
   width: 350.3px;
   max-width: 458.3px;
   height: 625.58px;
- 
-  
- 
+
   /* padding: 10px; */
   position: relative;
-  
 }
 
-
-.navigation2{
+.navigation2 {
   position: absolute;
   z-index: 888;
   top: 0;
-  gap:0px;
+  gap: 0px;
   display: flex;
   justify-content: space-around;
   background-color: transparent;
   width: 100%;
   padding: 10px 0px;
-  
+
   /* padding: 5px; */
 }
 /* Navbar text */
-.nav-text{
+.nav-text {
   color: gray;
   margin-top: 5px;
   font-size: 13px;
 }
-.text-capture{
+.text-capture {
   /* background-color: black; */
   position: absolute;
-  top:10%;
-  z-index:9999;
+  top: 10%;
+  z-index: 9999;
   color: gray;
 }
-.camera{
+.camera {
   position: relative !important;
   /* background-color: rgb(210, 13, 13) !important; */
-
 }
-
-
-
 
 /* .webcamBorder {
   position: absolute;
@@ -80,22 +72,22 @@ html,body{
   z-index: 1;
 } */
 
-.Camera-buttons{
+.Camera-buttons {
   display: flex;
   align-items: center;
   /* justify-content: center; */
-  
+
   /* background-color: white; */
   /* gap: 50px; */
   width: 100%;
   position: absolute;
-  bottom:6.5%;
-  z-index:9999;
+  bottom: 6.5%;
+  z-index: 9999;
   padding: 3px 0px;
   /* padding-left: 5px; */
 }
 
-.camera-buttons-icons{
+.camera-buttons-icons {
   /* background-color: black; */
   width: 30%;
   display: flex;
@@ -104,10 +96,10 @@ html,body{
   align-items: center;
   text-align: center;
   margin-left: 46%;
-  padding-Left:10px ;
+  padding-left: 10px;
 }
 
-.cameraIcon{
+.cameraIcon {
   /* justify-self: self-end !important; */
 }
 
@@ -119,94 +111,95 @@ html,body{
   z-index: 0;
   max-width: 100%;
   max-height: 100%;
-  
 }
 
 /* FRONTBACK */
-.front-back{
+.front-back {
   position: absolute;
   top: 60px;
-  background-color: #F8B427;
+  background-color: #f8b427;
   height: auto;
   width: 150px;
   padding: 2px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  display:flex;
+  display: flex;
   justify-content: center;
 }
 
-.front-back h5{
-  margin:0px !important;
-  color: #FFFFFF;
+.front-back h5 {
+  margin: 0px !important;
+  color: #ffffff;
 }
 
 /*FRONTBACK  */
 
-.navigation{
-  display:flex;
+.navigation {
+  display: flex;
   justify-content: center;
   align-self: center;
   gap: 50px;
 }
 
-.paragraph{
+.paragraph {
   margin: 10px 0 35px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 
-.nav-links{
+.nav-links {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
- 
 }
 
-.paragraph :first-child{
-  color:#5C5858;
+.paragraph :first-child {
+  color: #5c5858;
 }
 
-.paragraph> div {
-  color: #F8B427 ;
+.paragraph > div {
+  color: #f8b427;
 }
 
 /* custom webcam image */
-.image-custom{
-  
+.image-custom {
 }
-
-
 
 .ReactCrop .ReactCrop__crop-selection {
   border-radius: 50%;
   background-color: transparent !important;
-  border: solid 0px   !important;
+  border: solid 0px !important;
   /* z-index: 99999; */
-  
 }
 
-
 .ReactCrop .ReactCrop__image {
-  
-  -webkit-mask-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1), transparent, transparent);
-  mask-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1), transparent, transparent);
+  -webkit-mask-image: linear-gradient(
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 1),
+    transparent,
+    transparent
+  );
+  mask-image: linear-gradient(
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 1),
+    transparent,
+    transparent
+  );
   background-color: white;
 }
 
-
-
-
-.ReactCrop    {
-   filter: invert(100%);
-   -webkit-filter: invert(100%);
-   /* backdrop-filter: blur(10px); */
+.ReactCrop {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+  /* backdrop-filter: blur(10px); */
   /* filter: invert(100%) sepia(0%) saturate(4940%) hue-rotate(294deg) brightness(110%) contrast(55%); */
 }
 
-
+.enroll-text {
+  position: absolute;
+  bottom: 55px;
+}
