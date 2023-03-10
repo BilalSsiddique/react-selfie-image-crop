@@ -86,7 +86,7 @@ const CaptureCard = (/* {setCheck , setVerify,enroll, setEnroll} */) => {
     setCheck(false)
     setVerify(false)
     setEnroll(true)
-    setHoldData('Enroll Button Active')
+   
   }
 
   const handleVerify = () => {
