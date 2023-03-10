@@ -4,7 +4,7 @@ import CaptureCard from './CaptureScreen';
 
 function App() {
   return (
-    <main className="App">
+    <main className="App" >
       <CaptureCard />
     </main>
   );

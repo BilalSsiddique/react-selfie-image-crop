@@ -14,8 +14,8 @@ const CaptureCard = () => {
   const [captureImage, setCaptureImage] = useState(null);
   const crop = {
     unit: "px",
-    x: 85, // center the border horizontally
-    y: 110, // adjust the top margin as needed
+    x: 90, // center the border horizontally
+    y: 130, // adjust the top margin as needed
     width: 280,
     height: 380.58,
     // aspect: 1.5 / 1, // set to ID card aspect ratio
@@ -23,8 +23,8 @@ const CaptureCard = () => {
   const webcamRef = useRef(null);
 
   const videoConstraints = {
-    width: 440.3,
-    height: 630.58,
+    width: 450.3,
+    height: 700.58,
     facingMode: camera,
   };
 
@@ -58,7 +58,12 @@ const CaptureCard = () => {
         0,
         crop.width,
         crop.height
+
       );
+
+        
+
+
       
       const croppedImage = canvas.toDataURL("image/jpeg");
       // now set the image after croping and converting
@@ -68,25 +73,30 @@ const CaptureCard = () => {
   // const handleCropChange = (newCrop) => {
   //   setCrop(newCrop);
   // };
+  
 
   const handleCameraFlip = () => {
     setCamera(camera === "user" ? "environment" : "user");
   };
 
   return (
-    <div className="capture-card-container">
+    <div className="capture-card-container" >
       <div className="navigation">
         <div>
-          <img src={flip} alt="" width={30} height={31} />
+          <img src={'./enroll.svg'} alt="" width={30} height={31} />
+          <p className="nav-text">Enroll</p>
         </div>
         <div>
-          <img src={flip} alt="" width={30} height={31} />
+          <img src={'./verify.svg'} alt="" width={30} height={31} />
+          <p className="nav-text">Check</p>
         </div>
         <div>
-          <img src={flip} alt="" width={30} height={31} />
+          <img src={'./check.svg'} alt="" width={30} height={31} />
+          <p className="nav-text">Verify</p>
         </div>
         <div>
-          <img src={flip} alt="" width={30} height={31} />
+          <img src={'/ocr.svg'} alt="" width={30} height={31} />
+          <p className="nav-text">OCR</p>
         </div>
       </div>
       <div className="text-capture">
@@ -108,10 +118,14 @@ const CaptureCard = () => {
             mirrored={camera === "user"}
             ref={webcamRef}
             videoConstraints={videoConstraints}
+            className="webcam"
+           
           />
         ) : (
           <></>
         )}
+          
+        
         <ReactCrop
           src={captureImage}
           crop={crop}
@@ -127,9 +141,13 @@ const CaptureCard = () => {
             position: "absolute",
             top: 0,
             left: 0,
-            zIndex: 1,
+            zIndex: 0,
           }}
         />
+       
+        
+        
+        
 
         {/* <div className="webcamBorder"></div> */}
       </div>
@@ -186,7 +204,7 @@ const CaptureCard = () => {
           }}
         />
       )}
-      <img src={faceki} alt="name" style={{ alignSelf: "flex-start", position:'absolute',bottom:"0",background:"white" }} />
+      <img src={faceki} alt="name" style={{ alignSelf: "flex-start", position:'absolute',bottom:"3%",left: '2%',background:"white"  }} />
     </div>
   );
 };
