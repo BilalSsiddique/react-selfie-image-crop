@@ -9,7 +9,7 @@ import upload from "./Icons/Object.svg";
 import faceki from "./Icons/faceki.svg";
 import "react-image-crop/dist/ReactCrop.css";
 
-const CaptureCard = () => {
+const CaptureCard = ({setCheck , setVerify,enroll, setEnroll}) => {
   const [camera, setCamera] = useState("user");
   const [captureImage, setCaptureImage] = useState(null);
   const crop = {
@@ -23,6 +23,7 @@ const CaptureCard = () => {
   const webcamRef = useRef(null);
 
   const videoConstraints = {
+    
     width: 450.3,
     height: 630.58,
     facingMode: camera,
@@ -78,23 +79,42 @@ const CaptureCard = () => {
   const handleCameraFlip = () => {
     setCamera(camera === "user" ? "environment" : "user");
   };
+  const handleEnroll = ()=>{
+    setEnroll(true) 
+    setCheck(false)
+    setVerify(false)
+    
+  }
+  const handleVerify = ()=>{
+    setEnroll(false)
+    setCheck(false)
+    setVerify(true)
+
+    
+  }
+  const handleCheck = ()=>{
+    setEnroll(false)
+    setCheck(true)
+    setVerify(false)
+    
+  }
 
   return (
     <div className="capture-card-container" >
       <div className="navigation2">
-        <div>
+        <div onClick={handleEnroll} className='nav-links'>
           <img src={'./enroll.svg'} alt="" width={30} height={31} />
           <p className="nav-text">Enroll</p>
         </div>
-        <div>
+        <div className='nav-links' onClick={handleVerify}>
           <img src={'./verify.svg'} alt="" width={30} height={31} />
-          <p className="nav-text">Check</p>
-        </div>
-        <div>
-          <img src={'./check.svg'} alt="" width={30} height={31} />
           <p className="nav-text">Verify</p>
         </div>
-        <div>
+        <div className='nav-links' onClick={handleCheck}>
+          <img src={'./check.svg'} alt="" width={30} height={31} />
+          <p className="nav-text">Check</p>
+        </div>
+        <div className='nav-links'>
           <img src={'/ocr.svg'} alt="" width={30} height={31} />
           <p className="nav-text">OCR</p>
         </div>
@@ -160,7 +180,14 @@ const CaptureCard = () => {
         </div>
       )} */}
 
+      {enroll && 
+      <div className='enroll-text'>
+        <p>Place your face in center</p>
+        <input type="text" placeholder='Enter your name' /> 
+      </div>
+        }
       <div className="Camera-buttons">
+
         {/* <button onClick={capture}>Capture</button>  */}
         <div className="camera-buttons-icons">
           {captureImage != null ? (
