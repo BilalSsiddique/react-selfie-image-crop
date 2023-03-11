@@ -9,7 +9,7 @@ import upload from './Icons/Object.svg'
 import faceki from './Icons/faceki.svg'
 import 'react-image-crop/dist/ReactCrop.css'
 import { Link } from 'react-router-dom'
-
+import { Success } from './Success'
 const CaptureCard = (props) => {
   const {inputt,setinput}= props
   const [camera, setCamera] = useState('user')
@@ -111,6 +111,8 @@ const CaptureCard = (props) => {
   }
 
   return (
+    <>
+    
     <div className="capture-card-container">
       <div className="navigation2">
         <div onClick={handleEnroll} className="nav-links">
@@ -278,7 +280,9 @@ const CaptureCard = (props) => {
           left: '2%',
         }}
       />
+      
     </div>
+    </>
   )
 }
 

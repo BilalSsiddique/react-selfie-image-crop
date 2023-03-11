@@ -33,6 +33,7 @@ export const Success = ({inputt}) => {
           {" "}
           Hello , <span style={{ color: "black" }}>{inputt}</span> you are
           successfully verified{" "}
+          
         </p>
         <button
           style={{
