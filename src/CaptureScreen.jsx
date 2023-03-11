@@ -9,7 +9,8 @@ import upload from './Icons/Object.svg'
 import faceki from './Icons/faceki.svg'
 import 'react-image-crop/dist/ReactCrop.css'
 
-const CaptureCard = (/* {setCheck , setVerify,enroll, setEnroll} */) => {
+const CaptureCard = (props) => {
+  const {inputt,setinput}= props
   const [camera, setCamera] = useState('user')
   const [captureImage, setCaptureImage] = useState(null)
 
@@ -103,6 +104,11 @@ const CaptureCard = (/* {setCheck , setVerify,enroll, setEnroll} */) => {
     setHoldData('Check Button Active')
   }
 
+  const handleInput=(e)=>{
+    setinput(e.target.value )
+    console.log(inputt)
+  }
+
   return (
     <div className="capture-card-container">
       <div className="navigation2">
@@ -191,6 +197,7 @@ const CaptureCard = (/* {setCheck , setVerify,enroll, setEnroll} */) => {
         >
           <p style={{ color: '#5A5A5A' }}>Place your face in center</p>
           <input
+            value={inputt}
             style={{
               background: '#D9D9D9',
               marginTop: '-10px',
@@ -199,9 +206,11 @@ const CaptureCard = (/* {setCheck , setVerify,enroll, setEnroll} */) => {
               width: '145px',
               height: '32px',
               padding: '0px 15px',
+              
             }}
             type="text"
             placeholder="Type your name"
+            onChange={handleInput}
           />
         </div>
       )}
