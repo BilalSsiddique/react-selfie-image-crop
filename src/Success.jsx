@@ -20,7 +20,7 @@ export const Success = ({inputt}) => {
           position: "relative",
         }}
       >
-        <Link to='/'>
+        <Link to="/">
           <IconButton style={{ position: "absolute", top: "20px", left: "5%" }}>
             <ArrowBackOutlinedIcon />
           </IconButton>
@@ -33,7 +33,6 @@ export const Success = ({inputt}) => {
           {" "}
           Hello , <span style={{ color: "black" }}>{inputt}</span> you are
           successfully verified{" "}
-          
         </p>
         <button
           style={{
