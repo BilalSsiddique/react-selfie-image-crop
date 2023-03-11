@@ -8,6 +8,7 @@ import Flip2 from './Icons/Flip2.svg'
 import upload from './Icons/Object.svg'
 import faceki from './Icons/faceki.svg'
 import 'react-image-crop/dist/ReactCrop.css'
+import { Link } from 'react-router-dom'
 
 const CaptureCard = (props) => {
   const {inputt,setinput}= props
@@ -192,6 +193,7 @@ const CaptureCard = (props) => {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
+          
           }}
           className="enroll-text "
         >
@@ -233,13 +235,15 @@ const CaptureCard = (props) => {
               Retake
             </button>
           ) : (
+            <Link to='/success'>
             <img
               src={cameraIcon}
               onClick={capture}
               alt=""
-              width={60}
-              height={60}
+              width={60 }
+              height={enroll === true ? 50 : 60}
             />
+            </Link>
           )}
           <img
             src={Flip2}
@@ -270,7 +274,7 @@ const CaptureCard = (props) => {
         style={{
           alignSelf: 'flex-start',
           position: 'absolute',
-          bottom: '3%',
+          bottom: '2%',
           left: '2%',
         }}
       />

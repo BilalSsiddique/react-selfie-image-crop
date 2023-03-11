@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Typography, Button,IconButton } from '@mui/material'
 import ArrowBackOutlinedIcon from "@mui/icons-material/ArrowBackOutlined";
-
+import { Link } from 'react-router-dom';
 
 export const Success = ({inputt}) => {
   return (
@@ -17,12 +17,14 @@ export const Success = ({inputt}) => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          position:"relative"
+          position: "relative",
         }}
       >
-        <IconButton style={{position:'absolute',top:"20px",left:'5%'}}>
-          <ArrowBackOutlinedIcon />
-        </IconButton>
+        <Link to='/'>
+          <IconButton style={{ position: "absolute", top: "20px", left: "5%" }}>
+            <ArrowBackOutlinedIcon />
+          </IconButton>
+        </Link>
         <img src="./Success.svg" alt="success" width={100} />
         <p style={{ color: "gray", fontSize: "30px", fontWeight: "bold" }}>
           Successful
