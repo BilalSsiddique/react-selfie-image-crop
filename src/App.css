@@ -84,7 +84,7 @@ body {
 }
 .camera {
   /* position: absolute; */
-  height: 630.58 !important;
+  height: 100% !important;
   /* background-color: black !important; */
 }
 /* .react-webcam {
