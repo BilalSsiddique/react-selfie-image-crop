@@ -15,7 +15,7 @@ body {
  */
 .capture-card-container {
   display: flex;
-  background-color: white;
+  /* background-color: white; */
   box-shadow: 0px 0px 20px 5px rgb(94, 92, 92);
   border-radius: 5px;
   flex-direction: column;
