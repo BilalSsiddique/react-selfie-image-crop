@@ -165,7 +165,7 @@ const CaptureCard = (props) => {
             keepSelection={false}
             className="white-transparent"
             style={{
-              width: '100%',
+              width: '50%',
               height: '100%',
               overflow:'hidden',
               position: 'absolute',
