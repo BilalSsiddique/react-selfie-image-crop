@@ -79,6 +79,7 @@ body {
 
 .webcam {
   overflow: hidden !important;
+  width: 100%;
 }
 /* .react-webcam {
   position: absolute;
