@@ -127,7 +127,6 @@ body {
   border-radius: 50%;
   background-color: transparent !important;
   border: solid 0px !important;
-  position: absolute;
   z-index: 99999;
   overflow: hidden;
 }
@@ -136,8 +135,6 @@ body {
   filter: invert(100%);
   -webkit-filter: invert(100%);
   overflow: hidden;
-  position: absolute;
-  z-index: 99999;
   /* backdrop-filter: blur(10px); */
   /* filter: invert(100%) sepia(0%) saturate(4940%) hue-rotate(294deg) brightness(110%) contrast(55%); */
 }
