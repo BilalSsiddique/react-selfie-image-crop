@@ -123,7 +123,7 @@ const CaptureCard = (props) => {
           </div>
           <Link to="./ocr" style={{ textDecoration: "none" }}>
             <div className="nav-links">
-              <img src={"/ocr.svg"} alt="" width={30} height={31} />
+              <img src={"./ocr.svg"} alt="" width={30} height={31} />
               <p className="nav-text">OCR</p>
             </div>
           </Link>
