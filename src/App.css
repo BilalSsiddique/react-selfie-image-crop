@@ -136,25 +136,11 @@ body {
   z-index: 99999;
 }
 
-.ReactCrop .ReactCrop__image {
-  -webkit-mask-image: linear-gradient(
-    rgba(0, 0, 0, 1),
-    rgba(0, 0, 0, 1),
-    transparent,
-    transparent
-  );
-  mask-image: linear-gradient(
-    rgba(0, 0, 0, 1),
-    rgba(0, 0, 0, 1),
-    transparent,
-    transparent
-  );
-  background-color: white;
-}
 
 .ReactCrop {
   filter: invert(100%);
   -webkit-filter: invert(100%);
+  overflow: hidden;
   /* backdrop-filter: blur(10px); */
   /* filter: invert(100%) sepia(0%) saturate(4940%) hue-rotate(294deg) brightness(110%) contrast(55%); */
 }
