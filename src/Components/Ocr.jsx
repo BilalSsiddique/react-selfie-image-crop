@@ -22,7 +22,7 @@ const Ocr = () => {
 
   const videoConstraints = {
     width: 360.3,
-    height: 276.58,
+    height: 376.58,
     facingMode: camera,
   };
 
