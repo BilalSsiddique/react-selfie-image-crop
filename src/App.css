@@ -84,7 +84,7 @@ body {
 }
 .camera{
   position: absolute;
-  background-color: black !important;
+  /* background-color: black !important; */
 }
 /* .react-webcam {
   position: absolute;
