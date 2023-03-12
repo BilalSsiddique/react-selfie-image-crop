@@ -6,6 +6,7 @@ import "react-image-crop/dist/ReactCrop.css";
 import cameraIcon from "./Icons/camrea.svg";
 import Flip2 from "./Icons/Flip2.svg";
 import faceki from "./Icons/faceki.svg";
+import ocr from './Icons/OCR.svg'
 import "react-image-crop/dist/ReactCrop.css";
 import { Link } from "react-router-dom";
 const CaptureCard = (props) => {
@@ -123,7 +124,7 @@ const CaptureCard = (props) => {
           </div>
           <Link to="./ocr" style={{ textDecoration: "none" }}>
             <div className="nav-links">
-              <img src={"./OCR.svg"} alt="" width={30} height={31} />
+              <img src={ocr} alt="" width={30} height={31} />
               <p className="nav-text">OCR</p>
             </div>
           </Link>
@@ -149,7 +150,6 @@ const CaptureCard = (props) => {
               ref={webcamRef}
               videoConstraints={videoConstraints}
               className="webcam"
-              
             />
           ) : (
             <></>
