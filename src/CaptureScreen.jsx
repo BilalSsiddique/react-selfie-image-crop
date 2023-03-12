@@ -1,15 +1,13 @@
 import React, { useState, useRef } from 'react'
 import Webcam from 'react-webcam'
-// import "./App.css";
+import { useNavigate } from 'react-router-dom'
 import ReactCrop from 'react-image-crop'
 import 'react-image-crop/dist/ReactCrop.css'
 import cameraIcon from './Icons/camrea.svg'
 import Flip2 from './Icons/Flip2.svg'
-import upload from './Icons/Object.svg'
 import faceki from './Icons/faceki.svg'
 import 'react-image-crop/dist/ReactCrop.css'
 import { Link } from 'react-router-dom'
-import { Success } from './Success'
 const CaptureCard = (props) => {
   const { inputt, setinput } = props
   const [camera, setCamera] = useState('user')
@@ -56,10 +54,7 @@ const CaptureCard = (props) => {
     imageObj.src = imageSrc
     imageObj.onload = () => {
       ctx.beginPath()
-      // ctx.arc(100, 100, 60, 0, 6.28, false); //draw the circle
-      // ctx.clip(); //call the clip method so the next render is clipped in last path
-      // ctx.stroke();
-      // ctx.closePath();
+      
       ctx.drawImage(
         imageObj,
         crop.x,
@@ -77,10 +72,7 @@ const CaptureCard = (props) => {
       setCaptureImage(croppedImage)
     }
   }
-  // const handleCropChange = (newCrop) => {
-  //   setCrop(newCrop);
-  // };
-
+ 
   const handleCameraFlip = () => {
     setCamera(camera === 'user' ? 'environment' : 'user')
   }
@@ -112,7 +104,7 @@ const CaptureCard = (props) => {
     setinput(e.target.value)
     console.log(inputt)
   }
-
+  const navigate = useNavigate()
   return (
     <>
       <div className="capture-card-container">
@@ -129,10 +121,13 @@ const CaptureCard = (props) => {
             <img src={'./check.svg'} alt="" width={30} height={31} />
             <p className="nav-text">Check</p>
           </div>
-          <div className="nav-links">
-            <img src={'/ocr.svg'} alt="" width={30} height={31} />
-            <p className="nav-text">OCR</p>
-          </div>
+          <Link to='./ocr' style={{textDecoration:'none'}}>
+
+            <div className="nav-links">
+              <img src={'/ocr.svg'} alt="" width={30} height={31} />
+              <p className="nav-text">OCR</p>
+            </div>
+          </Link>
         </div>
         <div className="text-capture">
           <p>Capture</p>
@@ -179,16 +174,9 @@ const CaptureCard = (props) => {
             }}
           />
 
-          {/* <div className="webcamBorder"></div> */}
+          
         </div>
-        {/* {captureImage !== null ? (
-        ""
-      ) : (
-        <div className="paragraph">
-          <div>We'll ask you to enable camera access.</div>
-          <div>More about verification</div>
-        </div>
-      )} */}
+        
 
         {enroll && (
           <div
@@ -225,7 +213,7 @@ const CaptureCard = (props) => {
           }}
           className="Camera-buttons"
         >
-          {/* <button onClick={capture}>Capture</button>  */}
+          
           <div className="camera-buttons-icons">
             {captureImage != null ? (
               <button
@@ -256,7 +244,7 @@ const CaptureCard = (props) => {
               style={{ marginLeft: 'auto', alignSelf: 'end' }}
             />
           </div>
-          {/* <img src={upload} alt="" width={30} height={31} /> */}
+          
         </div>
         {captureImage &&
           {

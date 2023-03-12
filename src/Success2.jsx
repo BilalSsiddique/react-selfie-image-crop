@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Typography, Button, IconButton } from '@mui/material'
+import { Box, IconButton } from '@mui/material'
 import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined'
 import { Link } from 'react-router-dom'
 

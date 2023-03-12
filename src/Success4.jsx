@@ -1,9 +1,9 @@
 import React from 'react'
-import { Box, IconButton } from '@mui/material'
+import { Box,  IconButton } from '@mui/material'
 import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined'
 import { Link } from 'react-router-dom'
-
-export const Success = ({ inputt }) => {
+import Successful from './Icons/success.svg'
+export const Success4 = ({ inputt }) => {
   return (
     <>
       <Box
@@ -25,14 +25,14 @@ export const Success = ({ inputt }) => {
             <ArrowBackOutlinedIcon />
           </IconButton>
         </Link>
-        <img src="./Success.svg" alt="success" width={100} />
+        <img src={Successful} alt="success" width={100} />
         <p style={{ color: 'gray', fontSize: '30px', fontWeight: 'bold' }}>
           Successful
         </p>
         <p style={{ width: '50%', textAlign: 'center', color: 'grey' }}>
           {' '}
-          Hello , <span style={{ color: 'black' }}>{inputt}</span> , your face
-          has been successfully Enrolled{' '}
+          Hello, Check your #OCR Results
+          {/* <span style={{ color: 'black' }}>{inputt}</span>{' '} */}
         </p>
         <button
           style={{

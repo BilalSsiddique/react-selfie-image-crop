@@ -4,7 +4,9 @@ import { useState } from 'react'
 import { Success } from './Success'
 import { Success2 } from './Success2'
 import { Success3 } from './Success3'
+import { Success4 }  from './Success4'
 import { Routes, Route } from 'react-router-dom'
+import Ocr  from './Components/Ocr'
 
 function App() {
   const [input, setInput] = useState('')
@@ -28,6 +30,15 @@ function App() {
           path="/success3"
           element={<Success3 inputt={input.trim() === '' ? '' : input} />}
         ></Route>
+        <Route
+          path="/ocr"
+          element={<Ocr />}
+        ></Route>
+        <Route
+          path="/ocr/success4"
+          element={<Success4 inputt={input.trim() === '' ? '' : input} />}
+        ></Route>
+
       </Routes>
     </main>
   )
