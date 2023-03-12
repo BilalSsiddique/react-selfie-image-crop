@@ -51,10 +51,10 @@ body {
   z-index: 9999;
   color: black;
 }
-.camera {
+/* .camera {
   position: relative !important;
   overflow: hidden !important;
-}
+} */
 
 .Camera-buttons {
   display: flex;
