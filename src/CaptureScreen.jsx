@@ -11,7 +11,7 @@ import 'react-image-crop/dist/ReactCrop.css'
 import { Link } from 'react-router-dom'
 import { Success } from './Success'
 const CaptureCard = (props) => {
-  const {inputt,setinput}= props
+  const { inputt, setinput } = props
   const [camera, setCamera] = useState('user')
   const [captureImage, setCaptureImage] = useState(null)
 
@@ -20,6 +20,7 @@ const CaptureCard = (props) => {
   const [verify, setVerify] = useState(false)
   const [check, setCheck] = useState(true)
   const [holddata, setHoldData] = useState('Active Check Button')
+  const [url, setUrl] = useState('/success3')
 
   console.log(holddata)
 
@@ -88,7 +89,7 @@ const CaptureCard = (props) => {
     setCheck(false)
     setVerify(false)
     setEnroll(true)
-   
+    setUrl('/success')
   }
 
   const handleVerify = () => {
@@ -96,6 +97,7 @@ const CaptureCard = (props) => {
     setCheck(false)
     setVerify(true)
     setHoldData('Verify Button Active')
+    setUrl('/success2')
   }
 
   const handleCheck = () => {
@@ -103,10 +105,11 @@ const CaptureCard = (props) => {
     setCheck(true)
     setVerify(false)
     setHoldData('Check Button Active')
+    setUrl('/success3')
   }
 
-  const handleInput=(e)=>{
-    setinput(e.target.value )
+  const handleInput = (e) => {
+    setinput(e.target.value)
     console.log(inputt)
   }
 
@@ -115,19 +118,19 @@ const CaptureCard = (props) => {
       <div className="capture-card-container">
         <div className="navigation2">
           <div onClick={handleEnroll} className="nav-links">
-            <img src={"./enroll.svg"} alt="" width={30} height={31} />
+            <img src={'./enroll.svg'} alt="" width={30} height={31} />
             <p className="nav-text">Enroll</p>
           </div>
           <div className="nav-links" onClick={handleVerify}>
-            <img src={"./verify.svg"} alt="" width={30} height={31} />
+            <img src={'./verify.svg'} alt="" width={30} height={31} />
             <p className="nav-text">Verify</p>
           </div>
           <div className="nav-links" onClick={handleCheck}>
-            <img src={"./check.svg"} alt="" width={30} height={31} />
+            <img src={'./check.svg'} alt="" width={30} height={31} />
             <p className="nav-text">Check</p>
           </div>
           <div className="nav-links">
-            <img src={"/ocr.svg"} alt="" width={30} height={31} />
+            <img src={'/ocr.svg'} alt="" width={30} height={31} />
             <p className="nav-text">OCR</p>
           </div>
         </div>
@@ -148,7 +151,7 @@ const CaptureCard = (props) => {
           {captureImage === null ? (
             <Webcam
               audio={false}
-              mirrored={camera === "user"}
+              mirrored={camera === 'user'}
               ref={webcamRef}
               videoConstraints={videoConstraints}
               className="webcam"
@@ -167,9 +170,9 @@ const CaptureCard = (props) => {
             keepSelection={false}
             className="white-transparent"
             style={{
-              width: "100%",
-              height: "100%",
-              position: "absolute",
+              width: '100%',
+              height: '100%',
+              position: 'absolute',
               top: 0,
               left: 0,
               zIndex: 0,
@@ -190,24 +193,24 @@ const CaptureCard = (props) => {
         {enroll && (
           <div
             style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
             }}
             className="enroll-text "
           >
-            <p style={{ color: "#5A5A5A" }}>Place your face in center</p>
+            <p style={{ color: '#5A5A5A' }}>Place your face in center</p>
             <input
               value={inputt}
               style={{
-                background: "#D9D9D9",
-                marginTop: "-10px",
-                border: "none",
-                outline: "none",
-                width: "145px",
-                height: "32px",
-                padding: "0px 15px",
+                background: '#D9D9D9',
+                marginTop: '-10px',
+                border: 'none',
+                outline: 'none',
+                width: '145px',
+                height: '32px',
+                padding: '0px 15px',
               }}
               type="text"
               placeholder="Type your name"
@@ -218,7 +221,7 @@ const CaptureCard = (props) => {
 
         <div
           style={{
-            bottom: enroll ? "-1%" : "6.5%",
+            bottom: enroll ? '-1%' : '6.5%',
           }}
           className="Camera-buttons"
         >
@@ -227,14 +230,14 @@ const CaptureCard = (props) => {
             {captureImage != null ? (
               <button
                 onClick={(e) => {
-                  e.preventDefault();
-                  setCaptureImage(null);
+                  e.preventDefault()
+                  setCaptureImage(null)
                 }}
               >
                 Retake
               </button>
             ) : (
-              <Link to='/success'>
+              <Link to={url}>
                 <img
                   src={cameraIcon}
                   onClick={capture}
@@ -250,7 +253,7 @@ const CaptureCard = (props) => {
               alt="flipcamera"
               width={90}
               height={41}
-              style={{ marginLeft: "auto", alignSelf: "end" }}
+              style={{ marginLeft: 'auto', alignSelf: 'end' }}
             />
           </div>
           {/* <img src={upload} alt="" width={30} height={31} /> */}
@@ -272,15 +275,15 @@ const CaptureCard = (props) => {
           src={faceki}
           alt="name"
           style={{
-            alignSelf: "flex-start",
-            position: "absolute",
-            bottom: "2%",
-            left: "2%",
+            alignSelf: 'flex-start',
+            position: 'absolute',
+            bottom: '2%',
+            left: '2%',
           }}
         />
       </div>
     </>
-  );
+  )
 }
 
 export default CaptureCard

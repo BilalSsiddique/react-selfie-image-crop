@@ -3,7 +3,7 @@ import { Box, Typography, Button, IconButton } from '@mui/material'
 import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined'
 import { Link } from 'react-router-dom'
 
-export const Success = ({ inputt }) => {
+export const Success2 = ({ inputt }) => {
   return (
     <>
       <Box
@@ -31,8 +31,8 @@ export const Success = ({ inputt }) => {
         </p>
         <p style={{ width: '50%', textAlign: 'center', color: 'grey' }}>
           {' '}
-          Hello , <span style={{ color: 'black' }}>{inputt}</span> , your face
-          has been successfully Enrolled{' '}
+          Hello , <span style={{ color: 'black' }}>{inputt}</span> your are
+          successfully verified{' '}
         </p>
         <button
           style={{
