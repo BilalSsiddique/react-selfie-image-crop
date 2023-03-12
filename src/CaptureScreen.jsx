@@ -149,7 +149,7 @@ const CaptureCard = (props) => {
               ref={webcamRef}
               videoConstraints={videoConstraints}
               className="webcam"
-              height={630.58}
+              
             />
           ) : (
             <></>
