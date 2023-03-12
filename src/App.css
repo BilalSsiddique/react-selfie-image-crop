@@ -80,6 +80,7 @@ body {
 .webcam {
   overflow: hidden !important;
   width: 100%;
+  height: 625.58px !important;
   
 }
 /* .react-webcam {
