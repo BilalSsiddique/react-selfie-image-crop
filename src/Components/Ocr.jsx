@@ -57,9 +57,9 @@ const Ocr = () => {
   //   setCrop(newCrop);
   // };
 
-  const handleCameraFlip = () => {
-    setCamera(camera === "user" ? "environment" : "user");
-  };
+  // const handleCameraFlip = () => {
+  //   setCamera(camera === "user" ? "environment" : "user");
+  // };
 
   return (
     <div className="capture-card-container-ocr">
