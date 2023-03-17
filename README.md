@@ -1,5 +1,10 @@
 # React WebCam for Capturing selfie along with Croping(React-Image-Crop) 
 
+![image](https://user-images.githubusercontent.com/64930024/225958451-254e4a77-65f9-434e-a518-79311f9818d5.png)
+
+![image](https://user-images.githubusercontent.com/64930024/225958552-a4d04447-9da4-497e-8b0f-636f8b0e681e.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
